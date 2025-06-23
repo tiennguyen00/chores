@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+message ChatMessage {
+  string senderId = 1;        
+  string senderName = 2;      
+  string content = 3;         
+  string timestamp = 4;        
+}
+
+message SendMessageRequest {
+  ChatMessage message = 1;
+}
+
+message ReceiveMessage {
+  ChatMessage message = 1;
+}
